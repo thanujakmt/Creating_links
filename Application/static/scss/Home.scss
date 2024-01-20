@@ -1,0 +1,105 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'links';
+
+nav{
+    font-family: 'Roboto', sans-serif;
+    .nav_main{
+        // border: 1px solid black;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        .logo{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                background-color: rgb(98, 59, 254);
+                height: 25px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                color: white;
+                font-size: 1.2em;
+            }
+            h5{
+                margin: 5px;
+            }
+        }
+        .link_and_profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            .link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(103, 72, 227);
+                height: 40px;
+                width: 90px;
+                border-radius: 10px;
+                cursor: pointer;
+                background-color: rgb(239, 236, 255);
+                i{
+                    font-size: 0.8em;
+                }
+                p{
+                    margin: 10px;
+                    font-size: 0.9em;
+                    font-weight: 500;
+                }
+                &:hover{
+                        color: white;
+                        background-color: rgb(93, 67, 216);
+                    }
+            }
+            .profile{
+                // border: 1px solid black;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // gap: 10px;
+                margin: 10px;
+                color: rgb(120, 120, 120);
+                i{
+                    height: 22px;
+                    width: 22px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgb(120, 120, 120);
+                    font-size: 0.9em;
+                }
+                p{
+                    margin: 10px;
+                    font-size: 0.9em;
+                }
+            }
+        }
+        .preview{
+            cursor: pointer;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9em;
+            color: rgb(103, 72, 227);
+            border-radius: 10px;
+            border: 2px solid rgb(190, 175, 255); 
+            p{
+                margin-bottom: 0px;
+            }
+        }   
+    }
+}

@@ -1,0 +1,33 @@
+
+{% extends 'Page_layout.html' %}
+
+{% block body %}
+    <div class="container-fluid link_main">
+        <div class="row content">
+            <div class="col-md-4 mobile_image">
+                <div class="mobile_img">
+                    <img src="/static/images/phone.png" alt="">
+                </div>
+                <div class="profile_details">
+                    <img src="/static/images/user.png" alt="">
+                    <h2>Your Name</h2>
+                    <p>email@email.com</p>
+                </div>
+            </div>
+            <div class="col-md-7 details">
+                <h3>Customize your links</h3>
+                <p>Add/edit/remove links below and then share all your profiles with the world!</p>
+                <button class="add_new_link"><i class="fa-solid fa-plus"></i>Add new links</button>
+                <div class="new_links">
+                </div> 
+                <div class="save">
+                    <button type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='/Js/links.js') }}"></script>
+{% endblock %}
