@@ -2,5 +2,26 @@
 {% extends 'Page_layout.html' %}
 
 {% block body %}
+
+    <div class="container-fluid pro_main">
+        <div class="container pro_submain">
+            <div class="image">
+                <img src="{{ data['Image'] }}" alt="">
+            </div>
+            <div class="profilecontent">
+                <h3> <span>{{ data['Firstname'] }}</span> <span>{{ data['Lastname'] }}</span></h3>
+                <p>{{ data['Email'] }}</p>
+            </div>
+            <div class="social_links">
+                {% for social in data['Social_media'] %}
+                    <a href=" {{ social['url'] }}" target="_blank" style="background-color:{{ data['social_icon'][social['platform'].lower()]['color'] }}" class="socialMedia"><span><i class="{{ data['social_icon'][social['platform'].lower()]['icon'] }}"></i></span>{{ social['platform'] }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='/Js/links.js') }}"></script>
 {% endblock %}

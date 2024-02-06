@@ -6,7 +6,12 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: block;
+}
+
 .link_main .content {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,11 +48,138 @@
 }
 .link_main .content .mobile_image .profile_details img {
   height: 120px;
+  border-radius: 50%;
 }
 .link_main .content .mobile_image .profile_details h2 {
   margin: 5px;
+  font-size: 1.5em;
+}
+.link_main .content .mobile_image .links_in_mobile {
+  position: absolute;
+  top: 310px;
+  height: 50%;
+  overflow: auto;
+}
+.link_main .content .mobile_image .links_in_mobile .link_in_mobile {
+  cursor: pointer;
+  border: 1px solid rgb(107, 70, 254);
+  background-color: rgb(107, 70, 254);
+  color: white;
+  height: 40px;
+  width: 250px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.link_main .content .mobile_image .links_in_mobile .link_in_mobile p {
+  margin: 10px;
+}
+.link_main .content .details_two {
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position: absolute;
+  right: 55px;
+  background-color: white;
+}
+.link_main .content .details_two h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.link_main .content .details_two p {
+  color: gray;
+  font-size: 0.9em;
+}
+.link_main .content .details_two .Profile_picture p {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.link_main .content .details_two form {
+  justify-content: center;
+  align-items: center;
+}
+.link_main .content .details_two form #imageUpload {
+  visibility: hidden;
+}
+.link_main .content .details_two form .Change_img {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.link_main .content .details_two form .Change_img img {
+  height: 100px;
+}
+.link_main .content .details_two form label img {
+  border-radius: 50%;
+}
+.link_main .content .details_two form label h6 {
+  padding: 10px;
+}
+.link_main .content .details_two .profile_slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.link_main .content .details_two .profile_slide .Profile_picture {
+  height: 220px;
+  margin: 10px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+}
+.link_main .content .details_two .profile_slide p {
+  margin-bottom: 0px;
+}
+.link_main .content .details_two .profile_slide .name_email {
+  height: 220px;
+  margin: 10px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.link_main .content .details_two .profile_slide .name_email input {
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+}
+.link_main .content .details_two .profile_slide .name_email .email input[type=email] {
+  margin-left: 50px;
+}
+.link_main .content .details_two .profile_slide #profilewraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.link_main .content .details_two .profile_slide .submit {
+  height: 30px;
+  width: 100px;
+  border: 1px solid rgb(107, 70, 254);
+  background-color: white;
+  color: rgb(107, 70, 254);
+  border-radius: 20px;
+}
+.link_main .content .details_two .profile_slide .submit:hover {
+  background-color: rgb(107, 70, 254);
+  color: white;
 }
 .link_main .content .details {
+  position: relative;
   margin: 10px;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -207,6 +339,66 @@
 
 .show_dropdown {
   display: block !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pro_main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pro_main .pro_submain {
+  height: 80%;
+  width: 60%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 50px;
+  align-items: center;
+}
+.pro_main .pro_submain .image img {
+  height: 100px;
+  border-radius: 50%;
+}
+.pro_main .pro_submain .profilecontent h3 {
+  padding: 10px;
+}
+.pro_main .pro_submain .profilecontent p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pro_main .pro_submain .social_links {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 400px;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-height: 200px;
+}
+.pro_main .pro_submain .social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  height: 50px;
+  width: 150px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  gap: 10px;
+  border-radius: 10px;
 }
 
 nav {

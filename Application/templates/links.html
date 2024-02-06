@@ -1,7 +1,14 @@
 
 {% extends 'Page_layout.html' %}
 
+{% block navbar %}
+
+{% include 'navbar.html' %}
+
+{% endblock %}
+
 {% block body %}
+
     <div class="container-fluid link_main">
         <div class="row content">
             <div class="col-md-4 mobile_image">
@@ -9,9 +16,13 @@
                     <img src="/static/images/phone.png" alt="">
                 </div>
                 <div class="profile_details">
-                    <img src="/static/images/user.png" alt="">
-                    <h2>Your Name</h2>
-                    <p>email@email.com</p>
+                    <img class="phone_image" src="/static/images/user.png" alt="">
+                    <h2 class="firstName">First Name</h2>
+                    <h2 class="lastName">Last Name</h2>
+                    <p class="emailclass">email@email.com</p>
+                </div>
+                <div class="links_in_mobile">
+                   
                 </div>
             </div>
             <div class="col-md-7 details">
@@ -24,8 +35,45 @@
                     <button type="button">Save</button>
                 </div>
             </div>
+            <div class="col-md-7 details_two">
+                <h3>Profile Details</h3>
+                <p>Add your details to create a personal touch to your profile.</p>
+                <div class="row profile_slide">
+                    <div class="col-md-10 Profile_picture">
+                        <p>Profile picture</p>
+                        <form>
+                            <input type="file" id="imageUpload" onchange="previewImage()">
+                            <label for="imageUpload" class="Change_img">
+                              <img id="preview-image" class="preview-image" src="/static/images/user.png" alt="">
+                              <h6>Add image</h6>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col-md-10 name_email">
+                        <form action="{{ url_for('add_user') }}" method="post">
+                            <div class="first_name">
+                                <label for="" style="color: gray;">First name*</label>
+                                <input type="text" class="Namefirst" placeholder="Enter your first name">
+                            </div>
+                            <div class="last_name">
+                                <label for="" style="color: gray;">Last name*</label>
+                                <input type="text" class="Namelast" placeholder="Enter your last name">
+                            </div>
+                            <div class="email">
+                                <label for="" style="color: gray;">Email</label>
+                                <input type="email" class="input_email" placeholder="Enter your email">
+                            </div>
+                        </form>
+                    </div>
+                    <button type="button" class="submit">Submit</button>
+                    <div id="profilewraper">
+                        <a href="" target="_blank" id="profileUrl"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 {% endblock %}
 
 {% block script %}
