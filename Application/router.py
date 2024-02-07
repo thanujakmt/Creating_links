@@ -34,21 +34,15 @@ def get_user(id):
 @app.route('/add_user', methods=['POST'])
 def add_user():
     data = request.json
-    # print(data['image'])
-    # print(type(data))
     Firstname = data['fName']
     Lastname = data['lName']
     email = data['email']
     image = data['image']
     social_media = data['social_links']
-
     new_user = User(Firstname=Firstname,Lastname=Lastname, Email=email,Image = image, Social_media = social_media)
     db.session.add(new_user)
-    # id = new_user['id']
-    
     db.session.commit()
     user = User.query.filter_by(id = new_user.id).first()
-
     id = user.__dict__['id']
     fullUrl = f"{request.url_root}user/{id}"
     print(fullUrl)

@@ -235,6 +235,7 @@ const apiDataHandler = async () =>{
         let email = document.querySelector('.input_email').value
 
         data = {image: image, fName: fName, lName:lName, email:email, social_links:socialObjectArray}
+        console.log(typeof(data))
         let response = await submitDataToBackend(data)
         console.log(response)
         let profile = document.getElementById('profileUrl')
