@@ -363,3 +363,152 @@ nav{
 .show_dropdown{
     display: block !important;
 }
+
+@media only screen and (max-width: 540px) {
+    .link_main{
+        .content{
+            .mobile_image{
+                display: none;
+            }
+            .details_two{
+                right: -10px;
+                h3{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                }
+                p{
+                    color: gray;
+                    font-size: 0.9em;
+                }
+                .Profile_picture{
+                    p{
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 10px;
+                    }
+                }
+                form{
+                    #imageUpload{
+                        visibility: hidden;
+                    }
+                    .Change_img{
+                        img{
+                            height: 100px;
+                        }
+                    }
+                    label{
+                        img{
+                            border-radius: 50%;
+                        }
+                        h6{
+                            padding: 10px;
+                        }
+                    }
+                }
+                .profile_slide{
+                    .Profile_picture{
+                        height: 220px;
+                    }
+                    p{
+                        margin-bottom: 0px;
+                    }
+                    .name_email{
+                        height: 250px;
+                        input{
+                            margin: 10px;
+                        }
+                        .email{
+                            input[type="email"]{
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                    #profilewraper{
+                        display: flex;
+                    }
+                    .submit{
+                        height: 30px;
+                        &:hover{
+                            background-color: rgb(107, 70, 254);
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 1000px){
+    .link_main{
+        .content{
+            .mobile_image{
+                display: none;
+            }
+            .details_two{
+                right: 150px;
+                h3{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                }
+                p{
+                    color: gray;
+                    font-size: 0.9em;
+                }
+                .Profile_picture{
+                    p{
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 10px;
+                    }
+                }
+                form{
+                    #imageUpload{
+                        visibility: hidden;
+                    }
+                    .Change_img{
+                        img{
+                            height: 100px;
+                        }
+                    }
+                    label{
+                        img{
+                            border-radius: 50%;
+                        }
+                        h6{
+                            padding: 10px;
+                        }
+                    }
+                }
+                .profile_slide{
+                    .Profile_picture{
+                        height: 220px;
+                    }
+                    p{
+                        margin-bottom: 0px;
+                    }
+                    .name_email{
+                        height: 250px;
+                        input{
+                            margin: 10px;
+                        }
+                        .email{
+                            input[type="email"]{
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                    #profilewraper{
+                        display: flex;
+                    }
+                    .submit{
+                        height: 30px;
+                        &:hover{
+                            background-color: rgb(107, 70, 254);
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

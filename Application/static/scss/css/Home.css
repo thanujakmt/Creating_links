@@ -341,6 +341,122 @@ nav {
   display: block !important;
 }
 
+@media only screen and (max-width: 540px) {
+  .link_main .content .mobile_image {
+    display: none;
+  }
+  .link_main .content .details_two {
+    right: -10px;
+  }
+  .link_main .content .details_two h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+  .link_main .content .details_two p {
+    color: gray;
+    font-size: 0.9em;
+  }
+  .link_main .content .details_two .Profile_picture p {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .link_main .content .details_two form #imageUpload {
+    visibility: hidden;
+  }
+  .link_main .content .details_two form .Change_img img {
+    height: 100px;
+  }
+  .link_main .content .details_two form label img {
+    border-radius: 50%;
+  }
+  .link_main .content .details_two form label h6 {
+    padding: 10px;
+  }
+  .link_main .content .details_two .profile_slide .Profile_picture {
+    height: 220px;
+  }
+  .link_main .content .details_two .profile_slide p {
+    margin-bottom: 0px;
+  }
+  .link_main .content .details_two .profile_slide .name_email {
+    height: 250px;
+  }
+  .link_main .content .details_two .profile_slide .name_email input {
+    margin: 10px;
+  }
+  .link_main .content .details_two .profile_slide .name_email .email input[type=email] {
+    margin-left: 0px;
+  }
+  .link_main .content .details_two .profile_slide #profilewraper {
+    display: flex;
+  }
+  .link_main .content .details_two .profile_slide .submit {
+    height: 30px;
+  }
+  .link_main .content .details_two .profile_slide .submit:hover {
+    background-color: rgb(107, 70, 254);
+    color: white;
+  }
+}
+@media only screen and (min-width: 540px) and (max-width: 1000px) {
+  .link_main .content .mobile_image {
+    display: none;
+  }
+  .link_main .content .details_two {
+    right: 150px;
+  }
+  .link_main .content .details_two h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+  .link_main .content .details_two p {
+    color: gray;
+    font-size: 0.9em;
+  }
+  .link_main .content .details_two .Profile_picture p {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .link_main .content .details_two form #imageUpload {
+    visibility: hidden;
+  }
+  .link_main .content .details_two form .Change_img img {
+    height: 100px;
+  }
+  .link_main .content .details_two form label img {
+    border-radius: 50%;
+  }
+  .link_main .content .details_two form label h6 {
+    padding: 10px;
+  }
+  .link_main .content .details_two .profile_slide .Profile_picture {
+    height: 220px;
+  }
+  .link_main .content .details_two .profile_slide p {
+    margin-bottom: 0px;
+  }
+  .link_main .content .details_two .profile_slide .name_email {
+    height: 250px;
+  }
+  .link_main .content .details_two .profile_slide .name_email input {
+    margin: 10px;
+  }
+  .link_main .content .details_two .profile_slide .name_email .email input[type=email] {
+    margin-left: 0px;
+  }
+  .link_main .content .details_two .profile_slide #profilewraper {
+    display: flex;
+  }
+  .link_main .content .details_two .profile_slide .submit {
+    height: 30px;
+  }
+  .link_main .content .details_two .profile_slide .submit:hover {
+    background-color: rgb(107, 70, 254);
+    color: white;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -355,8 +471,8 @@ nav {
   align-items: center;
 }
 .pro_main .pro_submain {
-  height: 80%;
-  width: 60%;
+  height: fit-content;
+  width: fit-content;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
